@@ -51,11 +51,26 @@ const linksArray = Array.from(links);
 
 linksArray.forEach((link, index) => {
   link.textContent = siteContent["nav"][`nav-item-${index + 1}`];
+  link.style.color = "green";
 });
 // for (let i = 0; i < linksArray.length; i++) {
 //   links[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 // }
 
+// navigation extras
+const reviewsLink = document.createElement("a");
+reviewsLink.textContent = "Reviews";
+reviewsLink.href = "#";
+document.querySelector("nav").appendChild(reviewsLink);
+reviewsLink.style.color = "green";
+
+const homeLink = document.createElement("a");
+homeLink.textContent = "Home";
+homeLink.href = "#";
+document.querySelector("nav").prepend(homeLink);
+homeLink.style.color = "green";
+
+// cta
 const cta = document.querySelector(".cta");
 cta.style.paddingLeft = "250px";
 
